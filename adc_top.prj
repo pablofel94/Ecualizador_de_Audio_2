@@ -1,0 +1,3 @@
+verilog work "../Proyecto1EcualizadordeAudio/CLK.v"
+verilog work "../Proyecto1EcualizadordeAudio/adc_eq.v"
+verilog work "../Proyecto1EcualizadordeAudio/adc_top.v"

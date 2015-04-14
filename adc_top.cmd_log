@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "//psf/Home/Documents/I semestre 2015/Lab. Sistemas Digitales/Laboratorio_DSDigitales/LabDigitales/Ecualizador_de_Audio_2/adc_top.xst" -ofn "//psf/Home/Documents/I semestre 2015/Lab. Sistemas Digitales/Laboratorio_DSDigitales/LabDigitales/Ecualizador_de_Audio_2/adc_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "adc_top.ngc" adc_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o adc_top_map.ncd adc_top.ngd adc_top.pcf 
+par -w -intstyle ise -ol high -mt off adc_top_map.ncd adc_top.ncd adc_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml adc_top.twx adc_top.ncd -o adc_top.twr adc_top.pcf 

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "//psf/Home/Documents/I semestre 2015/Lab. Sistemas Digitales/Laboratorio_DSDigitales/LabDigitales/Ecualizador_de_Audio_2/unidad_aritmetica.xst" -ofn "//psf/Home/Documents/I semestre 2015/Lab. Sistemas Digitales/Laboratorio_DSDigitales/LabDigitales/Ecualizador_de_Audio_2/unidad_aritmetica.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "unidad_aritmetica.ngc" unidad_aritmetica.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o unidad_aritmetica_map.ncd unidad_aritmetica.ngd unidad_aritmetica.pcf 
+par -w -intstyle ise -ol high -mt off unidad_aritmetica_map.ncd unidad_aritmetica.ncd unidad_aritmetica.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml unidad_aritmetica.twx unidad_aritmetica.ncd -o unidad_aritmetica.twr unidad_aritmetica.pcf 
